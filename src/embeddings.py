@@ -12,6 +12,5 @@ def load_glove(path: str, word2idx: dict, dim: int) -> np.ndarray:
                 mat[idx] = vec
     return mat
 
-
 def scale_embeddings(mat: np.ndarray, scale: float) -> np.ndarray:
     return mat * scale
