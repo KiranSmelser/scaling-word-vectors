@@ -1,0 +1,24 @@
+dataset:
+  name: "universal_dependencies"
+  config_name: "en_ewt"
+  tokens_column: "tokens"
+  tags_column: "upos"
+  pad_token: "<pad>"
+  unk_token: "<unk>"
+  tag_pad_token: "<pad>"
+
+embeddings:
+  path: "embeddings/glove.6B.300d.txt"
+  dims: 300
+  scales: [0.01, 0.1, 1.0, 10.0, 100.0, 1000.0]
+
+model:
+  hidden_size: 256
+  dropout: 0.3
+
+train:
+  lr: 0.001
+  batch_size: 32
+  epochs: 10
+  seed: 42
+  save_dir: "models"
